@@ -1,0 +1,23 @@
+2018-03-11
+Getting started!
+The plan:
+Incrementally develop and seed a HapiJS API using a mongodb backend.
+
+Open questions:
+- How to host a functional app? Heroku? Amazon? Google?
+- Seeding data?
+- Data sources.
+- Do I even need a db?
+
+Getting started is tough!  Not sure where to begin.
+I'll start by just creating a file of driver.  Just 2017 driver to get started.
+
+Possible resources:
+- Node.js App with mongodb on Heroku:
+    https://scotch.io/tutorials/use-mongodb-with-a-node-application-on-heroku
+
+- Seeding:
+ Setting primary keys:
+    https://stackoverflow.com/questions/3298963/how-to-set-a-primary-key-in-mongodb
+    https://code.tutsplus.com/articles/an-introduction-to-mongoose-for-mongodb-and-nodejs--cms-29527
+

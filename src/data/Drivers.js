@@ -6,12 +6,19 @@
 // Object so that we can find all drivers from a country?
 // Driver abbreviations
 // status: {active:, reserve:, test:}
+// Driver abbrevs:
+// https://i.pinimg.com/originals/50/5c/52/505c528bb7c0846b606d0039b11510d7.jpg
+// https://www.reddit.com/r/formula1/comments/1aalmh/looking_for_all_abbreviations_of_f1_drivers_alo/
+
+// 2018 Driver lineup
+// http://www.bbc.com/sport/formula1/30427769
 
 // Note JS Date object is 0 indexed for the month
 const drivers = [
   // 2017
   {
     primaryKey: 'lewis-hamilton',
+    abbrev: 'HAM',
     country: 'United Kingdom',
     dob: new Date(Date.UTC(1985, 0, 7)),
     number: '44',
@@ -35,6 +42,7 @@ const drivers = [
   },
   {
     primaryKey: 'valtteri-bottas',
+    abbrev: 'BOT',
     country: 'Finland',
     dob: new Date(Date.UTC(1987, 7, 28)),
     number: '77',
@@ -45,6 +53,7 @@ const drivers = [
   },
   {
     primaryKey: 'sebastian-vettel',
+    abbrev: 'VET',
     country: 'Germany',
     dob: new Date(Date.UTC(1987, 6, 3)),
     number: '5',
@@ -62,12 +71,13 @@ const drivers = [
       '2015',
       '2016',
       '2017',
-      '2018'
+      '2018',
     ],
     notes: '',
   },
   {
     primaryKey: 'kimi-raikkonen',
+    abbrev: 'RAI',
     country: 'Finland',
     dob: new Date(Date.UTC(1979, 9, 17)),
     number: '7',
@@ -89,12 +99,13 @@ const drivers = [
       '2015',
       '2016',
       '2017',
-      '2018'
+      '2018',
     ],
     notes: '',
   },
   {
     primaryKey: 'daniel-ricciardo',
+    abbrev: 'RIC',
     country: 'Australia',
     dob: new Date(Date.UTC(1989, 6, 1)),
     number: '3',
@@ -114,16 +125,18 @@ const drivers = [
   },
   {
     primaryKey: 'max-verstappen',
+    abbrev: 'VER',
     country: 'Netherlands',
     dob: new Date(Date.UTC(1997, 8, 30)),
     number: '33',
     name: 'Max Verstappen',
     pob: 'Hasselt, Belgium',
     seasonsActive: ['2015', '2016', '2017', '2018'],
-    notes: '',
+    notes: 'Former driver abbreviation ’VES’',
   },
   {
     primaryKey: 'sergio-perez',
+    abbrev: 'PER',
     country: 'Mexico',
     dob: new Date(Date.UTC(1990, 0, 26)),
     number: '11',
@@ -143,6 +156,7 @@ const drivers = [
   },
   {
     primaryKey: 'esteban-ocon',
+    abbrev: 'OCO',
     country: 'France',
     dob: new Date(Date.UTC(1996, 8, 17)),
     number: '31',
@@ -153,6 +167,7 @@ const drivers = [
   },
   {
     primaryKey: 'felipe-massa',
+    abbrev: 'MAS',
     country: 'Brazil',
     dob: new Date(Date.UTC(1981, 3, 25)),
     number: '19',
@@ -179,6 +194,7 @@ const drivers = [
   },
   {
     primaryKey: 'lance-stroll',
+    abbrev: 'STR',
     country: 'Canada',
     dob: new Date(Date.UTC(1998, 9, 29)),
     number: '18',
@@ -189,6 +205,7 @@ const drivers = [
   },
   {
     primaryKey: 'daniil-kvyat',
+    abbrev: 'KVY',
     country: 'Russian Federation',
     dob: new Date(Date.UTC(1994, 3, 26)),
     number: '26',
@@ -199,6 +216,7 @@ const drivers = [
   },
   {
     primaryKey: 'carlos-sainz',
+    abbrev: 'SAI',
     country: 'Spain',
     dob: new Date(Date.UTC(1994, 8, 1)),
     number: '55',
@@ -209,6 +227,7 @@ const drivers = [
   },
   {
     primaryKey: 'romain-grosjean',
+    abbrev: 'GRO',
     country: 'France',
     dob: new Date(Date.UTC(1986, 3, 17)),
     number: '8',
@@ -228,6 +247,7 @@ const drivers = [
   },
   {
     primaryKey: 'kevin-magnussen',
+    abbrev: 'MAG',
     country: 'Denmark',
     dob: new Date(Date.UTC(1992, 9, 5)),
     number: '20',
@@ -238,6 +258,7 @@ const drivers = [
   },
   {
     primaryKey: 'nico-hulkenberg',
+    abbrev: 'HUL',
     country: 'Germany',
     dob: new Date(Date.UTC(1987, 7, 19)),
     number: '27',
@@ -251,12 +272,13 @@ const drivers = [
       '2015',
       '2016',
       '2017',
-      '2018'
+      '2018',
     ],
     notes: '',
   },
   {
     primaryKey: 'jolyon-palmer',
+    abbrev: 'PAL',
     country: 'United Kingdom',
     dob: new Date(Date.UTC(1991, 0, 20)),
     number: '30',
@@ -267,6 +289,7 @@ const drivers = [
   },
   {
     primaryKey: 'fernando-alonso',
+    abbrev: 'ALO',
     country: 'Spain',
     dob: new Date(Date.UTC(1981, 6, 29)),
     number: '14',
@@ -289,12 +312,13 @@ const drivers = [
       '2015',
       '2016',
       '2017',
-      '2018'
+      '2018',
     ],
     notes: '',
   },
   {
     primaryKey: 'stoffel-vandoorne',
+    abbrev: 'VAN',
     country: 'Belgium',
     dob: new Date(Date.UTC(1992, 2, 26)),
     number: '2',
@@ -305,6 +329,7 @@ const drivers = [
   },
   {
     primaryKey: 'marcus-ericsson',
+    abbrev: 'ERI',
     country: 'Sweden',
     dob: new Date(Date.UTC(1990, 8, 2)),
     number: '9',
@@ -315,6 +340,7 @@ const drivers = [
   },
   {
     primaryKey: 'pascal-wehrlein',
+    abbrev: 'WEH',
     country: 'Germany',
     dob: new Date(Date.UTC(1994, 9, 18)),
     number: '94',
@@ -325,6 +351,7 @@ const drivers = [
   },
   {
     primaryKey: 'antonio-giovinazzi',
+    abbrev: 'GIO',
     country: 'Italy',
     dob: new Date(Date.UTC(1993, 11, 14)),
     number: '50',
@@ -335,6 +362,7 @@ const drivers = [
   },
   {
     primaryKey: 'jenson-button',
+    abbrev: 'BUT',
     country: 'United Kingdom',
     dob: new Date(Date.UTC(1980, 0, 19)),
     number: '22',
@@ -364,6 +392,7 @@ const drivers = [
   },
   {
     primaryKey: 'paul-diresta',
+    abbrev: 'DIR',
     country: 'United Kingdom',
     dob: new Date(Date.UTC(1986, 3, 16)),
     number: '40',

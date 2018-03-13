@@ -21,3 +21,18 @@ Possible resources:
     https://stackoverflow.com/questions/3298963/how-to-set-a-primary-key-in-mongodb
     https://code.tutsplus.com/articles/an-introduction-to-mongoose-for-mongodb-and-nodejs--cms-29527
 
+Done:
+npm init
+npm install eslint --save-dev
+./node_modules/.bin/eslint --init
+npm install --save babel-core babel-preset-es2015
+Setup .babelrc
+    { "presets": [ "es2015" ] }
+Create .gitignore file at root
+    add node_modules to .gitignore
+
+Did not install hapi or any other dependencies yet
+
+Note:
+To run js file -> node <fileToRun>
+

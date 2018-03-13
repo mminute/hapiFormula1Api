@@ -1,0 +1,34 @@
+{
+  "name": "hapiformula1api",
+  "version": "0.1.0",
+  "description": "Hapi API for Formula 1 data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mminute/hapiFormula1Api.git"
+  },
+  "keywords": [
+    "Hapi",
+    "Formula1"
+  ],
+  "author": "mminute",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mminute/hapiFormula1Api/issues"
+  },
+  "homepage": "https://github.com/mminute/hapiFormula1Api#readme",
+  "devDependencies": {
+    "eslint": "^4.18.2",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}

@@ -1,27 +1,11 @@
 // const Driver = require('./models/Driver');
 
 // primaryKey: '', country: '', dob: new Date(Date.UTC(), number: '', name: '', pob: '', seasonsActive: [], notes: '',
-const socialMediaDomains = {
-  facebook: 'https://www.facebook.com/',
-  twitter: 'https://twitter.com/',
-  instagram: 'https://www.instagram.com/',
-  vKontakte: 'https://vk.com/',
-  odnoklassniki: 'https://ok.ru/',
-  pinterest: 'https://www.pinterest.com/',
-};
+
 // TODO's:
 // Object so that we can find all drivers from a country?
 // status: {active:, reserve:, test:}
 // maybe {'2017': 'Active'}
-// Social media?
-// socialMedia: {
-//   web: '',
-//   twitter: '',
-//   instagram: '',
-//   googlePlus: '',
-//   youtube: '',
-//   facebook: '',
-// },
 // Bio
 
 // Driver abbrevs:

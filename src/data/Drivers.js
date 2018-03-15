@@ -1,14 +1,35 @@
 // const Driver = require('./models/Driver');
 
 // primaryKey: '', country: '', dob: new Date(Date.UTC(), number: '', name: '', pob: '', seasonsActive: [], notes: '',
-
+const socialMediaDomains = {
+  facebook: 'https://www.facebook.com/',
+  twitter: 'https://twitter.com/',
+  instagram: 'https://www.instagram.com/',
+  vKontakte: 'https://vk.com/',
+  odnoklassniki: 'https://ok.ru/',
+  pinterest: 'https://www.pinterest.com/',
+};
 // TODO's:
 // Object so that we can find all drivers from a country?
-// Driver abbreviations
 // status: {active:, reserve:, test:}
+// maybe {'2017': 'Active'}
+// Social media?
+// socialMedia: {
+//   web: '',
+//   twitter: '',
+//   instagram: '',
+//   googlePlus: '',
+//   youtube: '',
+//   facebook: '',
+// },
+// Bio
+
 // Driver abbrevs:
 // https://i.pinimg.com/originals/50/5c/52/505c528bb7c0846b606d0039b11510d7.jpg
 // https://www.reddit.com/r/formula1/comments/1aalmh/looking_for_all_abbreviations_of_f1_drivers_alo/
+
+// More Driver info?
+// https://www.driverdb.com/drivers/lewis-hamilton/
 
 // 2018 Driver lineup
 // http://www.bbc.com/sport/formula1/30427769
@@ -39,6 +60,14 @@ const drivers = [
       '2018',
     ],
     notes: '',
+    socialMedia: {
+      web: 'http://www.lewishamilton.com/',
+      twitter: 'lewishamilton',
+      instagram: 'LewisHamilton',
+      googlePlus: '+LewisHamilton',
+      youtube: 'https://www.youtube.com/user/lewishamilton',
+      facebook: 'LewisHamilton',
+    },
   },
   {
     primaryKey: 'valtteri-bottas',
@@ -50,6 +79,12 @@ const drivers = [
     pob: 'Nastola, Finland',
     seasonsActive: ['2013', '2014', '2015', '2016', '2017', '2018'],
     notes: '',
+    socialMedia: {
+      web: 'http://valtteribottas.com/',
+      twitter: 'valtteribottas',
+      instagram: 'valtteribottas',
+      facebook: 'ValtteriBottas',
+    },
   },
   {
     primaryKey: 'sebastian-vettel',
@@ -74,6 +109,9 @@ const drivers = [
       '2018',
     ],
     notes: '',
+    socialMedia: {
+      web: 'http://www.sebastianvettel.de/',
+    },
   },
   {
     primaryKey: 'kimi-raikkonen',
@@ -102,6 +140,10 @@ const drivers = [
       '2018',
     ],
     notes: '',
+    socialMedia: {
+      web: 'http://www.kimiraikkonen.com/',
+      instagram: 'kimimatiasraikkonen',
+    },
   },
   {
     primaryKey: 'daniel-ricciardo',
@@ -122,6 +164,13 @@ const drivers = [
       '2018',
     ],
     notes: '',
+    socialMedia: {
+      web: 'http://danielricciardo.com/',
+      twitter: 'danielricciardo',
+      instagram: 'danielricciardo',
+      youtube: 'https://www.youtube.com/channel/UC23P0g2Vt4o6qt5dglgOGKQ',
+      facebook: 'DanielRicciardo',
+    },
   },
   {
     primaryKey: 'max-verstappen',
@@ -133,6 +182,13 @@ const drivers = [
     pob: 'Hasselt, Belgium',
     seasonsActive: ['2015', '2016', '2017', '2018'],
     notes: 'Former driver abbreviation ’VES’',
+    socialMedia: {
+      web: 'https://www.verstappen.nl',
+      twitter: 'Max33Verstappen',
+      instagram: 'maxverstappen1',
+      youtube: 'https://www.youtube.com/c/VerstappenNL33',
+      facebook: 'MaxVerstappen',
+    },
   },
   {
     primaryKey: 'sergio-perez',
@@ -153,6 +209,12 @@ const drivers = [
       '2018',
     ],
     notes: '',
+    socialMedia: {
+      web: 'https://sergioperez.mx',
+      twitter: 'SChecoPerez',
+      instagram: 'SChecoPerez',
+      facebook: 'sergioperezf1',
+    },
   },
   {
     primaryKey: 'esteban-ocon',
@@ -164,6 +226,11 @@ const drivers = [
     pob: 'Évreux, Normandy',
     seasonsActive: ['2016', '2017', '2018'],
     notes: '',
+    socialMedia: {
+      web: 'http://www.esteban-ocon.com/',
+      twitter: 'oconesteban',
+      instagram: 'estebanocon',
+    },
   },
   {
     primaryKey: 'felipe-massa',
@@ -191,6 +258,12 @@ const drivers = [
       '2017',
     ],
     notes: '',
+    socialMedia: {
+      web: 'http://felipemassa.com.br/',
+      twitter: 'massafelipe19',
+      instagram: 'massafelipe19',
+      facebook: 'massafelipe19',
+    },
   },
   {
     primaryKey: 'lance-stroll',
@@ -202,6 +275,12 @@ const drivers = [
     pob: 'Montreal, Canada',
     seasonsActive: ['2017', '2018'],
     notes: '',
+    socialMedia: {
+      web: 'https://www.lancestroll.com',
+      twitter: 'lance_stroll',
+      instagram: 'lance_stroll',
+      facebook: 'stroll.lance',
+    },
   },
   {
     primaryKey: 'daniil-kvyat',
@@ -213,6 +292,16 @@ const drivers = [
     pob: 'Ufa, Russia',
     seasonsActive: ['2014', '2015', '2016', '2017'],
     notes: '',
+    socialMedia: {
+      web: 'http://ru.kvyat.com/',
+      twitter: 'kvyatofficial',
+      vKontakte: 'kvyatofficial',
+      instagram: 'danydk1',
+      youtube: 'https://www.youtube.com/kvyatofficial',
+      facebook: 'daniilkvyatofficial',
+      odnoklassniki: 'group/<54490552139901></54490552139901>',
+      pinterest: 'kvyatofficial',
+    },
   },
   {
     primaryKey: 'carlos-sainz',
@@ -220,10 +309,17 @@ const drivers = [
     country: 'Spain',
     dob: new Date(Date.UTC(1994, 8, 1)),
     number: '55',
-    name: 'Carlos Sainz',
+    name: 'Carlos Sainz Jr',
     pob: 'Madrid, Spain',
     seasonsActive: ['2015', '2016', '2017', '2018'],
     notes: '',
+    socialMedia: {
+      web: 'http://www.carlossainz.es',
+      twitter: 'carlosainz',
+      instagram: 'carlosainz',
+      youtube: 'https://www.youtube.com/channel/UCsT2zNzVe3Z55sQVB8I6OBg',
+      facebook: 'carlosainz',
+    },
   },
   {
     primaryKey: 'romain-grosjean',
@@ -244,6 +340,12 @@ const drivers = [
       '2018',
     ],
     notes: '',
+    socialMedia: {
+      web: 'http://www.romaingrosjean.com/',
+      twitter: 'RGrosjean',
+      instagram: 'grosjeanromain',
+      facebook: 'grosjeanromain',
+    },
   },
   {
     primaryKey: 'kevin-magnussen',
@@ -255,6 +357,12 @@ const drivers = [
     pob: 'Roskilde, Denmark',
     seasonsActive: ['2014', '2015', '2016', '2017', '2018'],
     notes: '',
+    socialMedia: {
+      web: 'http://kevinmagnussen.com/',
+      twitter: 'KevinMagnussen',
+      instagram: 'kevinmagnussen',
+      facebook: 'KevinMagnussen',
+    },
   },
   {
     primaryKey: 'nico-hulkenberg',
@@ -275,6 +383,12 @@ const drivers = [
       '2018',
     ],
     notes: '',
+    socialMedia: {
+      web: 'http://www.nicohulkenberg.net/',
+      twitter: 'HulkHulkenberg',
+      instagram: 'hulkhulkenberg',
+      facebook: 'NicoHulkenberg.official',
+    },
   },
   {
     primaryKey: 'jolyon-palmer',
@@ -286,6 +400,12 @@ const drivers = [
     pob: 'Horsham, England',
     seasonsActive: ['2016', '2017'],
     notes: '',
+    socialMedia: {
+      web: 'http://www.jolyonpalmer.com/',
+      twitter: 'JolyonPalmer',
+      instagram: 'jolyon_palmer',
+      facebook: 'jolyonpalmer',
+    },
   },
   {
     primaryKey: 'fernando-alonso',
@@ -315,6 +435,13 @@ const drivers = [
       '2018',
     ],
     notes: '',
+    socialMedia: {
+      web: 'http://www.fernandoalonso.com/',
+      twitter: 'alo_oficial',
+      instagram: 'fernandoalo_oficial',
+      youtube: 'https://www.youtube.com/user/ALOoficial',
+      facebook: 'FernandoAlonsoOficial',
+    },
   },
   {
     primaryKey: 'stoffel-vandoorne',
@@ -326,6 +453,12 @@ const drivers = [
     pob: 'Kortrijk, Belgium',
     seasonsActive: ['2016', '2017', '2018'],
     notes: '',
+    socialMedia: {
+      web: 'http://stoffelvandoorne.com/',
+      twitter: 'svandoorne',
+      instagram: 'svandoorne',
+      facebook: 'Stoffel-Vandoorne-131994126828971',
+    },
   },
   {
     primaryKey: 'marcus-ericsson',
@@ -337,6 +470,12 @@ const drivers = [
     pob: 'Kumla, Sweden',
     seasonsActive: ['2014', '2015', '2016', '2017', '2018'],
     notes: '',
+    socialMedia: {
+      web: 'http://marcusericsson.com/',
+      twitter: 'ericsson_marcus',
+      instagram: 'ericsson_marcus',
+      facebook: 'MarcusEricssonOfficialF1Page',
+    },
   },
   {
     primaryKey: 'pascal-wehrlein',
@@ -348,6 +487,12 @@ const drivers = [
     pob: 'Sigmaringen, Germany',
     seasonsActive: ['2016', '2017'],
     notes: '',
+    socialMedia: {
+      web: 'http://www.pascal-wehrlein.de/',
+      twitter: 'pwehrlein',
+      instagram: 'pascal_wehrlein',
+      facebook: 'PWehrlein',
+    },
   },
   {
     primaryKey: 'antonio-giovinazzi',
@@ -359,6 +504,12 @@ const drivers = [
     pob: 'Martina Franca, Italy',
     seasonsActive: ['2017'],
     notes: '',
+    socialMedia: {
+      web: 'http://antoniogiovinazzi.com/',
+      twitter: 'anto_giovinazzi',
+      instagram: 'antogiovinazzi',
+      facebook: 'antogiovinazzi',
+    },
   },
   {
     primaryKey: 'jenson-button',
@@ -389,6 +540,13 @@ const drivers = [
       '2017',
     ],
     notes: '',
+    socialMedia: {
+      web: 'https://www.jensonbutton.com/',
+      twitter: 'jensonbutton',
+      instagram: 'jensonbutton_22',
+      googlePlus: 'https://plus.google.com/115831988003154421904',
+      facebook: 'JensonButtonOfficialPage',
+    },
   },
   {
     primaryKey: 'paul-diresta',
@@ -400,6 +558,12 @@ const drivers = [
     pob: 'Uphall, West Lothian, Scotland',
     seasonsActive: ['2011', '2012', '2013', '2017'],
     notes: '',
+    socialMedia: {
+      web: 'http://www.pauldiresta.com/',
+      twitter: 'pauldiresta',
+      instagram: 'paul_diresta',
+      facebook: 'PaulDiRestaOfficial',
+    },
   },
 ];
 

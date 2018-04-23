@@ -1,3 +1,63 @@
+===================================================================
+2018-04-22
+
+Used Formula1Bios repo to create js module exports for 2018 and hall of fame data
+
+TODO: bios for past seasons?
+
+===================================================================
+2018-03-31
+
+Got bios for hall of fame and current season drivers.
+
+TODO: bios for past seasons?
+
+Used F1DriversWikiScrapper to update HistoricalDrivers for 2018
+
+TODO: Add new drivers for 2018 to hapiFormula1Api/src/data/Drivers.js
+
+===================================================================
+2018-03-19
+Grabbed urls for formula1.com hall of fame bios using https://github.com/mminute/Formula1Bios
+TODO: grab urls for formula1.com current season drivers
+    Get bios from urls
+
+Rules, Regs, glossary, etc
+https://www.formula1.com/en/championship/inside-f1.html
+
+https://www.f1.cool/blog/2018/3/23/preseason-primer-2018
+
+===================================================================
+2018-03-19
+Grabbed data for all F1 drivers using https://github.com/mminute/F1DriversWikiScraper
+
+Notes:
+Driver abbrevs:
+https://i.pinimg.com/originals/50/5c/52/505c528bb7c0846b606d0039b11510d7.jpg
+https://www.reddit.com/r/formula1/comments/1aalmh/looking_for_all_abbreviations_of_f1_drivers_alo/
+
+More Driver info?
+https://www.driverdb.com/drivers/lewis-hamilton/
+http://f1.wikia.com/
+https://gprejects.com/
+
+2018 Driver lineup
+http://www.bbc.com/sport/formula1/30427769
+
+Hall of Fame
+https://www.formula1.com/en/championship/drivers/hall-of-fame.html
+
+Drivers
+https://www.formula1.com/en/championship/drivers.html
+
+Formula1.com old websites
+https://web.archive.org/web/*/http://formula1.com/
+https://web.archive.org/web/20171129180821/https://www.formula1.com/en/championship/drivers.html
+
+Next?
+Bios from formula1?
+
+===================================================================
 2018-03-11
 Getting started!
 The plan:
@@ -35,4 +95,3 @@ Did not install hapi or any other dependencies yet
 
 Note:
 To run js file -> node <fileToRun>
-

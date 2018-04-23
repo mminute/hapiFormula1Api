@@ -1,25 +1,81 @@
-// const Driver = require('./models/Driver');
-
-// primaryKey: '', country: '', dob: new Date(Date.UTC(), number: '', name: '', pob: '', seasonsActive: [], notes: '',
-
 // TODO's:
 // Object so that we can find all drivers from a country?
 // status: {active:, reserve:, test:}
 // maybe {'2017': 'Active'}
 // Bio
 
-// Driver abbrevs:
-// https://i.pinimg.com/originals/50/5c/52/505c528bb7c0846b606d0039b11510d7.jpg
-// https://www.reddit.com/r/formula1/comments/1aalmh/looking_for_all_abbreviations_of_f1_drivers_alo/
-
-// More Driver info?
-// https://www.driverdb.com/drivers/lewis-hamilton/
-
-// 2018 Driver lineup
-// http://www.bbc.com/sport/formula1/30427769
 
 // Note JS Date object is 0 indexed for the month
 const drivers = [
+  // 2018
+  {
+    primaryKey: 'pierre-gasly',
+    abbrev: 'GAS',
+    country: 'France',
+    dob: new Date(Date.UTC(1996, 1, 7)),
+    number: '10',
+    name: 'Pierre Gasly',
+    pob: 'Rouen, France',
+    seasonsActive: ['2017', '2018'],
+    notes: '',
+    socialMedia: {
+      web: 'https://www.pierregasly.com/',
+      twitter: 'pierregasly',
+      instagram: 'pierregasly',
+      facebook: 'PierreGasly',
+    },
+  },
+  {
+    primaryKey: 'brendon-hartley',
+    abbrev: 'HAR',
+    country: 'New Zealand',
+    dob: new Date(Date.UTC(1989, 10, 10)),
+    number: '28',
+    name: 'Brendon Hartley',
+    pob: 'Palmerston North, New Zealand',
+    seasonsActive: ['2017', '2018'],
+    notes: '',
+    socialMedia: {
+      web: 'http://www.brendonhartley.nz/',
+      twitter: 'BrendonHartley',
+      facebook: 'BrendonHartleyMotorsport',
+    },
+  },
+  {
+    primaryKey: 'charles-leclerc',
+    abbrev: 'LEC',
+    country: 'Monaco',
+    dob: new Date(Date.UTC(1997, 9, 16)),
+    number: '16',
+    name: 'Charles Leclerc',
+    pob: 'Monte Carlo, Monaco',
+    seasonsActive: ['2018'],
+    notes: '',
+    socialMedia: {
+      web: 'https://www.charlesleclerc.com/',
+      twitter: 'Charles_Leclerc',
+      instagram: 'charles_leclerc7',
+      facebook: 'CharlesLeclercOfficiel',
+    },
+  },
+  {
+    primaryKey: 'sergey-sirotkin',
+    abbrev: 'SIR',
+    country: 'Russia',
+    dob: new Date(Date.UTC(1995, 7, 27)),
+    number: '35',
+    name: 'Sergey Sirotkin',
+    pob: 'Moscow, Russia',
+    seasonsActive: ['2018'],
+    notes: '',
+    socialMedia: {
+      web: 'http://sirotkinsergey.com/',
+      twitter: 'sirotkin_sergey',
+      instagram: 'sergeysirotkin_official',
+      vKontakte: 'id74200758',
+      facebook: 'https://www.facebook.com/profile.php?id=100002676274886&lst=613967%3A100002676274886%3A1523381365',
+    },
+  },
   // 2017
   {
     primaryKey: 'lewis-hamilton',
@@ -547,6 +603,26 @@ const drivers = [
       twitter: 'pauldiresta',
       instagram: 'paul_diresta',
       facebook: 'PaulDiRestaOfficial',
+    },
+  },
+  // Miscellaneous Drivers:
+  // Thomas Monarch: Entered 1 racec- 1963 Mexican GP
+  // Very little is known about this driver.  Wikipedia redirect to the 1963 Mexican GP
+  // Not entirely sure he even entered this event.
+  // http://www.racingsportscars.com/driver/Tom-Monarch-USA.html
+  {
+    primaryKey: 'thomas-monarch',
+    country: 'United States of America',
+    dob: null,
+    name: 'Thomas Monarch',
+    seasonsActive: ['1963'],
+    notes: 'Very little is known about this driver.  Wikipedia redirect to the 1963 Mexican GP.' +
+      'There seems to be a question as to whether he participated in this race or entered then withdrew.',
+    socialMedia: {
+      web: 'http://www.pauldiresta.com/',
+    },
+    bio: {
+      wikiLink: 'https://en.wikipedia.org/wiki/Wikipedia:Articles_for_deletion/Thomas_Monarch',
     },
   },
 ];

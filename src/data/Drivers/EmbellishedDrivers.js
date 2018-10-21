@@ -1,5 +1,5 @@
+import Countries from '../SupportClasses/Countries';
 // TODO's:
-// Object so that we can find all drivers from a country?
 // status: {active:, reserve:, test:}
 // maybe {'2017': 'Active'}
 // Bio
@@ -11,7 +11,7 @@ const drivers = [
   {
     primaryKey: 'pierre-gasly',
     abbrev: 'GAS',
-    country: 'France',
+    country: Countries.France,
     dob: new Date(Date.UTC(1996, 1, 7)),
     number: '10',
     name: 'Pierre Gasly',
@@ -28,7 +28,7 @@ const drivers = [
   {
     primaryKey: 'brendon-hartley',
     abbrev: 'HAR',
-    country: 'New Zealand',
+    country: Countries.NewZealand,
     dob: new Date(Date.UTC(1989, 10, 10)),
     number: '28',
     name: 'Brendon Hartley',
@@ -44,7 +44,7 @@ const drivers = [
   {
     primaryKey: 'charles-leclerc',
     abbrev: 'LEC',
-    country: 'Monaco',
+    country: Countries.Monaco,
     dob: new Date(Date.UTC(1997, 9, 16)),
     number: '16',
     name: 'Charles Leclerc',
@@ -61,7 +61,7 @@ const drivers = [
   {
     primaryKey: 'sergey-sirotkin',
     abbrev: 'SIR',
-    country: 'Russia',
+    country: Countries.Russia,
     dob: new Date(Date.UTC(1995, 7, 27)),
     number: '35',
     name: 'Sergey Sirotkin',
@@ -80,7 +80,7 @@ const drivers = [
   {
     primaryKey: 'lewis-hamilton',
     abbrev: 'HAM',
-    country: 'United Kingdom',
+    country: Countries.UnitedKingdom,
     dob: new Date(Date.UTC(1985, 0, 7)),
     number: '44',
     name: 'Lewis Hamilton',
@@ -112,7 +112,7 @@ const drivers = [
   {
     primaryKey: 'valtteri-bottas',
     abbrev: 'BOT',
-    country: 'Finland',
+    country: Countries.Finland,
     dob: new Date(Date.UTC(1987, 7, 28)),
     number: '77',
     name: 'Valtteri Bottas',
@@ -129,7 +129,7 @@ const drivers = [
   {
     primaryKey: 'sebastian-vettel',
     abbrev: 'VET',
-    country: 'Germany',
+    country: Countries.Germany,
     dob: new Date(Date.UTC(1987, 6, 3)),
     number: '5',
     name: 'Sebastian Vettel',
@@ -156,7 +156,7 @@ const drivers = [
   {
     primaryKey: 'kimi-raikkonen',
     abbrev: 'RAI',
-    country: 'Finland',
+    country: Countries.Finland,
     dob: new Date(Date.UTC(1979, 9, 17)),
     number: '7',
     name: 'Kimi Räikköne',
@@ -188,7 +188,7 @@ const drivers = [
   {
     primaryKey: 'daniel-ricciardo',
     abbrev: 'RIC',
-    country: 'Australia',
+    country: Countries.Australia,
     dob: new Date(Date.UTC(1989, 6, 1)),
     number: '3',
     name: 'Daniel Ricciardo',
@@ -215,7 +215,7 @@ const drivers = [
   {
     primaryKey: 'max-verstappen',
     abbrev: 'VER',
-    country: 'Netherlands',
+    country: Countries.Netherlands,
     dob: new Date(Date.UTC(1997, 8, 30)),
     number: '33',
     name: 'Max Verstappen',
@@ -233,7 +233,7 @@ const drivers = [
   {
     primaryKey: 'sergio-perez',
     abbrev: 'PER',
-    country: 'Mexico',
+    country: Countries.Mexico,
     dob: new Date(Date.UTC(1990, 0, 26)),
     number: '11',
     name: 'Sergio Perez',
@@ -259,7 +259,7 @@ const drivers = [
   {
     primaryKey: 'esteban-ocon',
     abbrev: 'OCO',
-    country: 'France',
+    country: Countries.France,
     dob: new Date(Date.UTC(1996, 8, 17)),
     number: '31',
     name: 'Esteban Ocon',
@@ -275,7 +275,7 @@ const drivers = [
   {
     primaryKey: 'felipe-massa',
     abbrev: 'MAS',
-    country: 'Brazil',
+    country: Countries.Brazil,
     dob: new Date(Date.UTC(1981, 3, 25)),
     number: '19',
     name: 'Felipe Massa',
@@ -308,7 +308,7 @@ const drivers = [
   {
     primaryKey: 'lance-stroll',
     abbrev: 'STR',
-    country: 'Canada',
+    country: Countries.Canada,
     dob: new Date(Date.UTC(1998, 9, 29)),
     number: '18',
     name: 'Lance Stroll',
@@ -325,7 +325,7 @@ const drivers = [
   {
     primaryKey: 'daniil-kvyat',
     abbrev: 'KVY',
-    country: 'Russian Federation',
+    country: Countries.Russian,
     dob: new Date(Date.UTC(1994, 3, 26)),
     number: '26',
     name: 'Daniil Kvyat',
@@ -346,7 +346,7 @@ const drivers = [
   {
     primaryKey: 'carlos-sainz',
     abbrev: 'SAI',
-    country: 'Spain',
+    country: Countries.Spain,
     dob: new Date(Date.UTC(1994, 8, 1)),
     number: '55',
     name: 'Carlos Sainz Jr',
@@ -364,7 +364,7 @@ const drivers = [
   {
     primaryKey: 'romain-grosjean',
     abbrev: 'GRO',
-    country: 'France',
+    country: Countries.France,
     dob: new Date(Date.UTC(1986, 3, 17)),
     number: '8',
     name: 'Romain Grosjean',
@@ -390,7 +390,7 @@ const drivers = [
   {
     primaryKey: 'kevin-magnussen',
     abbrev: 'MAG',
-    country: 'Denmark',
+    country: Countries.Denmark,
     dob: new Date(Date.UTC(1992, 9, 5)),
     number: '20',
     name: 'Kevin Magnussen',
@@ -407,7 +407,7 @@ const drivers = [
   {
     primaryKey: 'nico-hulkenberg',
     abbrev: 'HUL',
-    country: 'Germany',
+    country: Countries.Germany,
     dob: new Date(Date.UTC(1987, 7, 19)),
     number: '27',
     name: 'Nico Hulkenberg',
@@ -433,7 +433,7 @@ const drivers = [
   {
     primaryKey: 'jolyon-palmer',
     abbrev: 'PAL',
-    country: 'United Kingdom',
+    country: Countries.UnitedKingdom,
     dob: new Date(Date.UTC(1991, 0, 20)),
     number: '30',
     name: 'Jolyon Palmer',
@@ -450,7 +450,7 @@ const drivers = [
   {
     primaryKey: 'fernando-alonso',
     abbrev: 'ALO',
-    country: 'Spain',
+    country: Countries.Spain,
     dob: new Date(Date.UTC(1981, 6, 29)),
     number: '14',
     name: 'Fernando Alonso',
@@ -486,7 +486,7 @@ const drivers = [
   {
     primaryKey: 'stoffel-vandoorne',
     abbrev: 'VAN',
-    country: 'Belgium',
+    country: Countries.Belgium,
     dob: new Date(Date.UTC(1992, 2, 26)),
     number: '2',
     name: 'Stoffel Vandoorne',
@@ -503,7 +503,7 @@ const drivers = [
   {
     primaryKey: 'marcus-ericsson',
     abbrev: 'ERI',
-    country: 'Sweden',
+    country: Countries.Sweden,
     dob: new Date(Date.UTC(1990, 8, 2)),
     number: '9',
     name: 'Marcus Ericsson',
@@ -520,7 +520,7 @@ const drivers = [
   {
     primaryKey: 'pascal-wehrlein',
     abbrev: 'WEH',
-    country: 'Germany',
+    country: Countries.Germany,
     dob: new Date(Date.UTC(1994, 9, 18)),
     number: '94',
     name: 'Pascal Wehrlein',
@@ -537,7 +537,7 @@ const drivers = [
   {
     primaryKey: 'antonio-giovinazzi',
     abbrev: 'GIO',
-    country: 'Italy',
+    country: Countries.Italy,
     dob: new Date(Date.UTC(1993, 11, 14)),
     number: '50',
     name: 'Antonio Giovinazzi',
@@ -554,7 +554,7 @@ const drivers = [
   {
     primaryKey: 'jenson-button',
     abbrev: 'BUT',
-    country: 'United Kingdom',
+    country: Countries.UnitedKingdom,
     dob: new Date(Date.UTC(1980, 0, 19)),
     number: '22',
     name: 'Jenson Button',
@@ -591,7 +591,7 @@ const drivers = [
   {
     primaryKey: 'paul-diresta',
     abbrev: 'DIR',
-    country: 'United Kingdom',
+    country: Countries.UnitedKingdom,
     dob: new Date(Date.UTC(1986, 3, 16)),
     number: '40',
     name: 'Paul di Resta',
@@ -612,7 +612,7 @@ const drivers = [
   // http://www.racingsportscars.com/driver/Tom-Monarch-USA.html
   {
     primaryKey: 'thomas-monarch',
-    country: 'United States of America',
+    country: Countries.USA,
     dob: null,
     name: 'Thomas Monarch',
     seasonsActive: ['1963'],

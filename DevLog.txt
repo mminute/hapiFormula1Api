@@ -1,7 +1,55 @@
+2018-10-19
+
+Getting back to this.  I've got a scraper working to produce a json file for the results posted by the FIA
+after each Formula 1 race. (repo is: f1_1ster -> See the readme for directions on how to generate the json data).
+
+Added a couple routes in server.js
+- /v1/seasons
+- /v1/season/{year}
+
+Added controller stub files for each of those routes
+
+Consider adding some sort of index route that list available routes/data?
+
+TODO: Some sort of script to copy files over from f1_1ster,
+create an index file where those files are all imported then exported as one Array
+Might make use of exportComposer repo.
+
+===================================================================
+2018-06-08
+
+Great Data: https://fivethirtyeight.com/features/formula-one-racing/?ex_cid=story-twitter
+
+===================================================================
+2018-05-08
+
+To get html version of results from fia.com:
+/Users/mjennings/code/f1_1ster/lib/v2/GatherData.rb
+
+===================================================================
+2018-05-07
+
+To Download pdf etc for races: /Users/mjennings/code/f1_1ster/lib/dataProcessing/scrapeResultsPage.rb
+
+===================================================================
+2018-04-29
+Used repo exportComposer to create index files for:
+/Users/mjennings/code/hapiFormula1Api/src/data/Drivers/2018
+/Users/mjennings/code/hapiFormula1Api/src/data/Drivers/HallOfFame
+
+
 ===================================================================
 2018-04-22
 
 Used Formula1Bios repo to create js module exports for 2018 and hall of fame data
+Installed hapi
+    npm install hapi
+
+setup bootstrap.js file
+Add start script to package.json
+    Starts up fine!
+
+Imported js bios generated with from Formula1Bios repo to /data..
 
 TODO: bios for past seasons?
 

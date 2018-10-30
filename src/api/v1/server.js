@@ -18,7 +18,7 @@ const registerRoutes = () => {
   });
   server.route({
     method: 'GET',
-    path: '/v1/season/{year}',
+    path: '/v1/season/{year}/{event?}',
     handler: SeasonController,
   });
 };

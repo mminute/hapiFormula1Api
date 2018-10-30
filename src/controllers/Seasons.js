@@ -1,6 +1,8 @@
-import Seasons from '../data/JSON/Seasons/2018/index';
+import Seasons from '../data/JSON/Seasons/index';
 
 const SeasonsController = (request, h) => {
+  // TODO: return a summary of the Seasons instead of full season data
+  // Year, number of events, driver ranking, constructor ranking
   return Seasons;
 };
 

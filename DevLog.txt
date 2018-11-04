@@ -1,3 +1,8 @@
+2018-11-04
+
+https://www.bbc.com/sport/formula1/drivers-world-championship/standings
+
+===================================================================
 2018-10-19
 
 Getting back to this.  I've got a scraper working to produce a json file for the results posted by the FIA

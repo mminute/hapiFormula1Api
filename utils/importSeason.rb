@@ -11,10 +11,6 @@ createDirIfNeeded(destination)
 
 filesToIndex = Dir.glob(jsonDir + '/*')
 
-# if !File.exist?(fileName)
-    
-# end
-
 FileUtils.copy(filesToIndex, destination)
 
 indexFile = ExportComposer.new(destination, 'GP').compose

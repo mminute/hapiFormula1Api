@@ -9,7 +9,7 @@ class ExportComposer
     end
 
     def compose
-        files = Dir[@directory_name + "/*"].sort
+        files = Dir[@directory_name + "/*"].sort.select { |file_name| !file_name.match(/\.js$/) }
 
         import_data = files.map { |file_path| compose_import(file_path) }
 

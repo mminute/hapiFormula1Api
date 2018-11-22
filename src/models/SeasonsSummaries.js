@@ -1,4 +1,4 @@
-import SeasonsData from '../data/JSON/Seasons/index';
+import SeasonsData from '../data/Seasons';
 import SeasonToPointsSystem from './DriverPoints';
 
 const sortByPoints = (a, b) => {

@@ -1,3 +1,16 @@
+2018-11-21
+
+Trying to make the object spread operator work.
+I think I need to npm install a plugin update and update .babelrc
+
+Upgraded babel to 7.0.0
+npm install --save-dev @babel/core @babel/cli @babel/preset-env
+npm install --save @babel/polyfill
+npm install @babel/core @babel/register --save-dev
+npm uninstall babel-register
+npm unistall babel-core
+
+===================================================================
 2018-11-09
 
 Reason season summary driver totals is off:

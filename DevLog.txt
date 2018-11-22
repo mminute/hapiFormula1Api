@@ -1,3 +1,33 @@
+2018-11-21
+
+Trying to make the object spread operator work.
+I think I need to npm install a plugin update and update .babelrc
+
+Upgraded babel to 7.0.0
+npm install --save-dev @babel/core @babel/cli @babel/preset-env
+npm install --save @babel/polyfill
+npm install @babel/core @babel/register --save-dev
+npm uninstall babel-register
+npm unistall babel-core
+
+===================================================================
+2018-11-09
+
+Reason season summary driver totals is off:
+Romain Grosjean was diqualified from the 2018 Italian GP
+https://www.formula1.com/en/latest/headlines/2018/9/grosjean-disqualified-from-italian-gp.html
+
+https://en.wikipedia.org/wiki/2018_Italian_Grand_Prix
+
+He finished 6th.
+His DQ promoted Ocon, Perez, Sainz, Stroll, and Sirotkin
+
+===================================================================
+2018-11-04
+
+https://www.bbc.com/sport/formula1/drivers-world-championship/standings
+
+===================================================================
 2018-10-19
 
 Getting back to this.  I've got a scraper working to produce a json file for the results posted by the FIA

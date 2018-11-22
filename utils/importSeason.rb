@@ -16,6 +16,3 @@ FileUtils.copy(filesToIndex, destination)
 indexFile = ExportComposer.new(destination, 'GP').compose
 
 p indexFile
-
-
-# File.write(@filename, doc.join(''))

@@ -1,4 +1,4 @@
-import Seasons from '../data/JSON/Seasons/index';
+import Seasons from '../data/Seasons';
 
 const SeasonController = (request, h) => {
   console.log('request.params.event?', request.params.event);

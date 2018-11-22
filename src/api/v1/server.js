@@ -19,6 +19,8 @@ const registerRoutes = () => {
   server.route({
     method: 'GET',
     path: '/v1/season/{year}/{event?}',
+    // event could be the race date or a more readable name.
+    // maybe support both?
     handler: SeasonController,
   });
 };

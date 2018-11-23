@@ -51,12 +51,11 @@ const makeSeasonSummaries = () => {
         })
         .sort(sortByPoints);
     // Total for a couple drivers is off
-    // Sainz: actual 45- shown as 43
-    // Sirotkin: actual 1- shown as 0 -Italian GP promotion
-    // Perez: actual 57- shown 55
-    // Ocon: actual 49- shown 47
-    // Grosjean: actual 31- shown 39
-    // Stroll: actual 6- shown 5
+    // Perez: -6
+    // Ocon: -8
+    // Saiz: -4
+    // Stroll: -2
+    // Sirotkin: -1
 
     seasons[k] = {
       racesComplete: numberOfRacesComplete,

@@ -17,6 +17,7 @@ import GP16RussianGrandPrix from './16-RussianGrandPrix.json';
 import GP17JapaneseGrandPrix from './17-JapaneseGrandPrix.json';
 import GP18UnitedStatesGrandPrix from './18-UnitedStatesGrandPrix.json';
 import GP19MexicanGrandPrix from './19-MexicanGrandPrix.json';
+import GP20BrazilianGrandPrix from './20-BrazilianGrandPrix.json';
 
 module.exports = [
   GP01AustralianGrandPrix,
@@ -38,4 +39,5 @@ module.exports = [
   GP17JapaneseGrandPrix,
   GP18UnitedStatesGrandPrix,
   GP19MexicanGrandPrix,
+  GP20BrazilianGrandPrix,
 ];

@@ -50,12 +50,6 @@ const makeSeasonSummaries = () => {
           return newTotals;
         })
         .sort(sortByPoints);
-    // Total for a couple drivers is off
-    // Perez: -6
-    // Ocon: -8
-    // Saiz: -4
-    // Stroll: -2
-    // Sirotkin: -1
 
     seasons[k] = {
       racesComplete: numberOfRacesComplete,

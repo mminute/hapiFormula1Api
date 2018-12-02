@@ -9,10 +9,10 @@ const updateItaly2018 = (grandPrix) => {
         position: 'Disqualified',
       };
     } else if (parseInt(classification.position, 10) > 6) {
-      const correctedPosition = parseInt(classification.position, 10) + 1;
+      const correctedPosition = parseInt(classification.position, 10) - 1;
       return {
         ...classification,
-        position: toString(correctedPosition),
+        position: correctedPosition.toString(),
       };
     }
 

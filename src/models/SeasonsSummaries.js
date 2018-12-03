@@ -13,7 +13,7 @@ const sortByPoints = (a, b) => {
   return 0;
 };
 
-const raceToDriverPoints = (season) => {
+const seasonToDriverPoints = (season) => {
   const pointsSystem = SeasonToPointsSystem[season];
   return (race) => {
     const { classifications } = race;
@@ -25,15 +25,15 @@ const raceToDriverPoints = (season) => {
 };
 
 const makeSeasonSummaries = () => {
-  // constructor ranking
   const seasons = {};
   const seasonKeys = Object.keys(SeasonsData);
   seasonKeys.forEach((k) => {
-    const numberOfRacesComplete = SeasonsData[k].length;
-    const calculateRacePoints = raceToDriverPoints(k);
+    const races = SeasonsData[k];
+    const numberOfRacesComplete = races.length;
+    const calculateDriverPoints = seasonToDriverPoints(k);
     const driverPoints =
-      SeasonsData[k]
-        .map(race => calculateRacePoints(race))
+      races
+        .map(race => calculateDriverPoints(race))
         .reduce((accumulator, current) => {
           const newTotals = [];
           current.forEach((currentEntry) => {
@@ -51,10 +51,56 @@ const makeSeasonSummaries = () => {
         })
         .sort(sortByPoints);
 
+    const allConstructorResults = [];
+
+    races
+      .forEach((race) => {
+        const { classifications } = race;
+        const pointsSystem = SeasonToPointsSystem[k];
+
+        classifications.forEach((classification) => {
+          allConstructorResults.push({
+            points: pointsSystem[classification.position] || 0,
+            team: classification.team,
+          });
+        });
+      });
+
+
+    // TODO: Note about Force India DQ'ed and points removed when renamed Racing Point force india
+    const constructorPoints =
+      allConstructorResults
+        .reduce((accumulator, currentClassification) => {
+          const newTotals = [...accumulator];
+          const constructorEntry =
+            newTotals.find(entry => entry.team === currentClassification.team);
+
+          let constructorIdx;
+          if (constructorEntry) {
+            constructorIdx = newTotals.indexOf(constructorEntry);
+          }
+
+          if (constructorIdx > -1) {
+            const previousConstructorEntry = accumulator[constructorIdx];
+            const newConstructorEntry =
+              {
+                ...previousConstructorEntry,
+                points: previousConstructorEntry.points + currentClassification.points,
+              };
+
+            newTotals[constructorIdx] = newConstructorEntry;
+          } else {
+            newTotals.push(currentClassification);
+          }
+
+          return newTotals;
+        }, [])
+        .sort(sortByPoints);
+
     seasons[k] = {
       racesComplete: numberOfRacesComplete,
       driverRanking: driverPoints,
-      constructorRanking: [],
+      constructorRanking: constructorPoints,
     };
   });
   return seasons;

@@ -13,7 +13,7 @@ const sortByPoints = (a, b) => {
   return 0;
 };
 
-const raceToDriverPoints = (season) => {
+const seasonToDriverPoints = (season) => {
   const pointsSystem = SeasonToPointsSystem[season];
   return (race) => {
     const { classifications } = race;
@@ -30,7 +30,7 @@ const makeSeasonSummaries = () => {
   seasonKeys.forEach((k) => {
     const races = SeasonsData[k];
     const numberOfRacesComplete = races.length;
-    const calculateDriverPoints = raceToDriverPoints(k);
+    const calculateDriverPoints = seasonToDriverPoints(k);
     const driverPoints =
       races
         .map(race => calculateDriverPoints(race))

@@ -1,4 +1,5 @@
 import Seasons from '../data/Seasons';
+import normalizeRaceNames from '../../utils/normalizeRaceNames';
 
 const SeasonController = (request, h) => {
   const requestedSeason = Seasons[request.params.year];
@@ -11,8 +12,9 @@ const SeasonController = (request, h) => {
       const requestedIdx = parseInt(request.params.event, 10) - 1;
       requestedRace = requestedSeason[requestedIdx] || {};
     } else {
-      // Handle name
-      requestedRace = {};
+      const requestedEventName = normalizeRaceNames(request.params.event);
+      requestedRace =
+        requestedSeason.find(race => race.name.toLowerCase().match(requestedEventName));
     }
 
     return requestedRace || {};

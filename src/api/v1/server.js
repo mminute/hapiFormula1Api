@@ -1,6 +1,7 @@
 import Hapi from 'hapi';
 import SeasonController from '../../controllers/Season';
 import SeasonsController from '../../controllers/Seasons';
+import StatsController from '../../controllers/Stats';
 
 const makeVersionPath = version => path => version + path;
 
@@ -24,6 +25,11 @@ const registerRoutes = () => {
     method: 'GET',
     path: v1('season/{year}/{event?}'),
     handler: SeasonController,
+  });
+  server.route({
+    method: 'GET',
+    path: v1('stats'),
+    handler: StatsController,
   });
 };
 

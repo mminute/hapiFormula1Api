@@ -2,25 +2,27 @@ import Hapi from 'hapi';
 import SeasonController from '../../controllers/Season';
 import SeasonsController from '../../controllers/Seasons';
 
+const makeVersionPath = version => path => version + path;
+
+const v1 = makeVersionPath('/v1/');
+
 const server = new Hapi.Server({ port: 3000, host: 'localhost' });
 
 const registerRoutes = () => {
   server.route({
     method: 'GET',
-    path: '/v1/index',
+    path: v1('index'),
     handler: () => 'index',
     // Route to tell you all the possible routes/data?
   });
   server.route({
     method: 'GET',
-    path: '/v1/seasons',
+    path: v1('seasons'),
     handler: SeasonsController,
   });
   server.route({
     method: 'GET',
-    path: '/v1/season/{year}/{event?}',
-    // event could be the race date or a more readable name.
-    // maybe support both?
+    path: v1('season/{year}/{event?}'),
     handler: SeasonController,
   });
 };

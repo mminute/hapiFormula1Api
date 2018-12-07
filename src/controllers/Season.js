@@ -7,6 +7,9 @@ const SeasonController = (request, h) => {
     let requestedRace;
     if (request.params.event.match(/\d{8}/)) {
       requestedRace = requestedSeason.find(race => race.date === request.params.event);
+    } else if (request.params.event.match(/^\d{2}$/)) {
+      const requestedIdx = parseInt(request.params.event, 10) - 1;
+      requestedRace = requestedSeason[requestedIdx] || {};
     } else {
       // Handle name
       requestedRace = {};

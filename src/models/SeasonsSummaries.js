@@ -1,7 +1,12 @@
 import SeasonsData from '../data/Seasons';
 import SeasonToPointsSystem from './DriverPoints';
+import constructorChampionshipCorrections from './constructorChampionshipCorrections';
 
 const sortByPoints = (a, b) => {
+  if (typeof b.points === 'string') {
+    return -1;
+  }
+
   if (b.points > a.points) {
     return 1;
   }
@@ -66,10 +71,8 @@ const makeSeasonSummaries = () => {
         });
       });
 
-
-    // TODO: Note about Force India DQ'ed and points removed when renamed Racing Point force india
     const constructorPoints =
-      allConstructorResults
+      constructorChampionshipCorrections(k, allConstructorResults
         .reduce((accumulator, currentClassification) => {
           const newTotals = [...accumulator];
           const constructorEntry =
@@ -94,7 +97,7 @@ const makeSeasonSummaries = () => {
           }
 
           return newTotals;
-        }, [])
+        }, []))
         .sort(sortByPoints);
 
     seasons[k] = {

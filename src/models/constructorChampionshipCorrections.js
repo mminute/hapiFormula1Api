@@ -1,4 +1,3 @@
-// TODO: Note about Force India DQ'ed and points removed when renamed Racing Point force india
 const constructorChampionshipCorrections = (season, uncorrected) => {
   if (season === '2018') {
     return uncorrected.map((constructorResult) => {

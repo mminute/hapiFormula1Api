@@ -1,3 +1,19 @@
+2018-12-07
+
+Finished with the SeasonSummary you get by going to '/v1/seasons'
+Show # of races completed, drivers championship points, and constructor championship points.
+
+Added a new controller to handle '/v1/stats' routes.
+
+Minor refactor for versioning api in server.js
+
+Added route '/v1/stats/podiums/2018' to show podiums by driver and constructor.
+
+http://www.statsf1.com/en/default.aspx
+http://www.4mula1.ro/statistics/
+https://www.racefans.net/2018-f1-season/2018-f1-statistics/
+
+===================================================================
 2018-11-21
 
 Trying to make the object spread operator work.

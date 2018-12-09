@@ -28,7 +28,7 @@ const registerRoutes = () => {
   });
   server.route({
     method: 'GET',
-    path: v1('stats'),
+    path: v1('stats/{stat}/{year}/{event?}'),
     handler: StatsController,
   });
 };

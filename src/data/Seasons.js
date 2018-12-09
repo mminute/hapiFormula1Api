@@ -1,5 +1,8 @@
 import SeasonsData from '../data/JSON/Seasons/index';
 
+// TODO: Assign constructor to driver entries where missing:
+// fastest laps
+
 const updateItaly2018 = (grandPrix) => {
   const { classifications } = grandPrix;
   const correctedClassifications = classifications.map((classification) => {

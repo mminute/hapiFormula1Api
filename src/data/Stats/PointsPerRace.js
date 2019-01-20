@@ -25,6 +25,8 @@ const collectPoints = entityType => ((entityResults) => {
       rcs.map(r => r.points)
         .reduce((acc, current) => acc + current, 0);
 
+    // TODO: dividing length by 2 could be incorrect since it is possible that a team
+    // ran a different number of drivers than 2
     const raceCount = entityType === 'team' ? rcs.length / 2 : rcs.length;
 
     totalPts += points;

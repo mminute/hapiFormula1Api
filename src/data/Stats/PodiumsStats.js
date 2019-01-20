@@ -1,5 +1,7 @@
 import SeasonsData from '../Seasons';
 import flattenArray from '../../../utils/flattenArray';
+import getConstructors from './Utils/getConstructors';
+import getDrivers from './Utils/getDrivers';
 
 const collectPodiums = (podiumResults, type) => {
   const podiums = {
@@ -35,17 +37,13 @@ const calculatePodiumStats = () => {
 
     const allPodiumClassifications = flattenArray(raceResults);
 
-    const allDrivers =
-      [...new Set(allPodiumClassifications.map(classification => classification.driver))];
     const driverResults =
-      allDrivers
+      getDrivers(allPodiumClassifications)
         .map(name => allPodiumClassifications.filter(k => k.driver === name))
         .map(driverPodiums => collectPodiums(driverPodiums, 'driver'));
 
-    const allConstructors =
-      [...new Set(allPodiumClassifications.map(classification => classification.team))];
     const constructorResults =
-      allConstructors
+      getConstructors(allPodiumClassifications)
         .map(team => allPodiumClassifications.filter(k => k.team === team))
         .map(driverPodiums => collectPodiums(driverPodiums, 'team'));
 

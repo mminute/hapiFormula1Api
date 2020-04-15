@@ -2,7 +2,6 @@ import CalculatedStats from '../data/Stats/CalculatedStats';
 
 // Stat ideas:
 //  Season:
-//    Points per race by driver/constructor
 //    Races completed by driver/constructor
 //      Laps completed?
 //    DNF by crash/mechanical/etc
